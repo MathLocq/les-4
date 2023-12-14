@@ -1,12 +1,6 @@
 #gebruik de requests-module om gegevens op te halen van de "JSONPlaceholder" API (https://jsonplaceholder.typicode.com/) 
 # #instructies:
 
-
-
-
-
-
-
 # import requests
 
 # # 1: haal gegevens op van de API-endpoint /todos/1
@@ -29,7 +23,7 @@
 
 
 
-
+#---------------------------------------------------------------------------------------------------------------------------------------
 #CAT API oefening: ophalen foto, openen in browser en opslaan lokaal
     
 # import webbrowser
@@ -45,33 +39,46 @@
 #     hond.write(afbeelding.content)
 
 
-
+#---------------------------------------------------------------------------------------------------------------------------------------
 #oefening api moppen: 
-import requests
+# import requests
 
-input = int(input("Wat is je leeftijd? "))
+# input = int(input("Wat is je leeftijd? "))
             
-if input < 18:
-    counter = 0
-    while counter < 1:
+# if input < 18:
+#     counter = 0
+#     while counter < 1:
 
-        response = requests.get("https://moppenbot.nl/api/random/")
-        data = response.json()
-        adult = data['joke']["nsfw"]
-        mop = data['joke']['joke']
-        print(adult)
-        if adult == False:
-            print(mop)
-            counter +=1 
-        if adult == True:
+#         response = requests.get("https://moppenbot.nl/api/random/")
+#         data = response.json()
+#         adult = data['joke']["nsfw"]
+#         mop = data['joke']['joke']
+#         print(adult)
+#         if adult == False:
+#             print(mop)
+#             counter +=1 
+#         if adult == True:
             
-            continue
+#             continue
         
         
 
-else:
-    response = requests.get("https://moppenbot.nl/api/random/")
-    data = response.json()
-    mop = data['joke']['joke']
-    print(mop)
-      
+# else:
+#     response = requests.get("https://moppenbot.nl/api/random/")
+#     data = response.json()
+#     mop = data['joke']['joke']
+#     print(mop)
+       
+#
+
+#---------------------------------------------------------------------------------------------------------------------------------------
+
+#oefening nieuws
+
+# import requests
+# onderwerp=str(input('Waarover wil je iets meer weten?'))
+# url="https://newsapi.org/v2/everything?q="+onderwerp+"&from=2023-11-14&sortBy=publishedAt&apiKey=e48c49081778415ebb75433c54d61ac9"
+# response=requests.get(url)
+# gegevens=response.json()
+# for titel in gegevens['articles']:
+#         print(f"Titels: {titel['title']}")
